@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cipher Vault Home Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main_new.css">
+
+    </head>
+
+    <body> 
+        <div class="logo_label">
+            <img src="Cipher Vault Logo.png" alt="Cipher Vault Logo">   <h1>Cipher Vault</h1>
+        </div>
+        <div class="grid-container">
+            <div>
+                <label for="Encryption Type"><b><strong>Encryption Type:</strong></b> 
+                    <Select id="Encryption-Type"  onchange="handleEncryptionChange()" required>
+                        <option value="">Select One</option>
+                        <option value="Ceaser Cipher">Ceaser Cipher</option>
+                        <option value="Vignere Cipher">Vignere Cipher</option>
+                    </Select>
+                </label>
+                <input id="key" type="text" placeholder="Type your key here!" required>
+            </div>
+            <div>
+                <button id="encrypt" type = "button" onclick="Encrypt()">Encrypt</button>
+                <button id="decrypt" onclick="Decrypt()">Decrypt</button>
+            </div>
+            <div>
+                <textarea name="" id="message" placeholder="Write your message here!" required></textarea>
+            </div>
+            <div>
+                <textarea name="" id="Encrypted-Message" placeholder="Your Encrypted Message will be shown here!"></textarea>
+            </div>
+        </div>
+
+        <script src="encrypt.js"></script>
+
+    </body>
+
+</html>
